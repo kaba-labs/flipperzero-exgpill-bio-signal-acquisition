@@ -1,0 +1,17 @@
+# For details & more options, see documentation/AppManifests.md in firmware repo
+
+App(
+    appid="bioamp_exg_pill_signal_acquisition",  # Must be unique
+    name="[EXGPILL] Bio Signal Acquisition",  # Displayed in menus
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="bioamp_exg_pill_app",
+    stack_size=2 * 1024,
+    fap_category="GPIO",
+    # Optional values
+    fap_version="0.1.1",
+    fap_icon="bioamp_exg_pill_signal_acquisition.png",  # 10x10 1-bit PNG
+    fap_description="BioAmp EXG Pill Signal Acquisition.",
+    fap_author="Kaba Labs, Inc",
+    fap_weburl="https://kaba.ai",
+    fap_icon_assets="images",  # Image assets to compile for this application
+)
