@@ -24,16 +24,16 @@
 #define BioAmpEXGPill_APP_FOLDER EXT_PATH(BioAmpEXGPill_APP_FOLDER_USER)
 #define BioAmpEXGPill_APP_FOLDER_LOGS BioAmpEXGPill_APP_FOLDER "/logs"
 
-typedef enum BioAmpEXGPillUserInputType {
-    BioAmpEXGPillUserInputTypeString,
-    BioAmpEXGPillUserInputTypeNumber,
-    BioAmpEXGPillUserInputTypeFileName
-} BioAmpEXGPillUserInputType;
+// typedef enum BioAmpEXGPillUserInputType {
+    // BioAmpEXGPillUserInputTypeString,
+    // BioAmpEXGPillUserInputTypeNumber,
+    // BioAmpEXGPillUserInputTypeFileName
+// } BioAmpEXGPillUserInputType;
 
 struct BioAmpEXGPillApp {
     Gui* gui;
-    // ViewDispatcher* view_dispatcher;
-    // SceneManager* scene_manager;
+    ViewDispatcher* view_dispatcher;
+    SceneManager* scene_manager;
 
     FuriString* text_box_store;
     bool need_to_prompt_settings_init;

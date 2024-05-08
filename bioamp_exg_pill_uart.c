@@ -1,10 +1,12 @@
+#include <bioamp_exg_pill_app_i.h>
+#include <bioamp_exg_pill_uart.h>
+
 #include <furi.h>
 #include <furi_hal.h>
 #include <furi_hal_pwm.h>
 #include <input/input.h>
 #include <gui/gui.h>
 #include <stdlib.h>
-#include <bioamp_exg_pill_uart.h>
 /* #include <stm32wbxx_ll_lptim.h> */
 /* #include <stm32wbxx_ll_rcc.h> */
 
