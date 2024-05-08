@@ -1,7 +1,7 @@
 #pragma once
 
 #include "bioamp_exg_pill_app.h"
-#include "scenes/bioamp_exg_pill_scene.h"
+#include "scenes/bioamp_exg_pill_app_scene.h"
 #include "bioamp_exg_pill_custom_event.h"
 #include "bioamp_exg_pill_uart.h"
 
