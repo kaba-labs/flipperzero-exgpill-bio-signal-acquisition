@@ -163,7 +163,8 @@ BioAmpEXGPillUart* bioamp_exg_pill_uart_init(
     uart->serial_handle = furi_hal_serial_control_acquire(channel);
     furi_check(uart->serial_handle);
     furi_hal_serial_init(uart->serial_handle, BAUDRATE);
-    furi_hal_serial_async_rx_start(uart->serial_handle, bioamp_exg_pill_uart_on_irq_cb, uart, false);
+    furi_hal_serial_async_rx_start(
+        uart->serial_handle, bioamp_exg_pill_uart_on_irq_cb, uart, false);
 
     return uart;
 }

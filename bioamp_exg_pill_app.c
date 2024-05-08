@@ -26,6 +26,20 @@ static void bioamp_exg_pill_app_tick_event_callback(void* context) {
 BioAmpEXGPillApp* bioamp_exg_pill_app_alloc() {
     BioAmpEXGPillApp* app = malloc(sizeof(BioAmpEXGPillApp));
 
+    app->gui = furi_record_open(RECORD_GUI);
+
+    app->view_dispatcher = view_dispatcher_alloc();
+    app->scene_manager = scene_manager_alloc(&bioamp_exg_pill_scene_handlers, app);
+    view_dispatcher_enable_queue(app->view_dispatcher);
+    view_dispatcher_set_event_callback_context(app->view_dispatcher, app);
+
+    view_dispatcher_set_custom_event_callback(
+        app->view_dispatcher, bioamp_exg_pill_app_custom_event_callback);
+    view_dispatcher_set_navigation_event_callback(
+        app->view_dispatcher, bioamp_exg_pill_app_back_event_callback);
+    view_dispatcher_set_tick_event_callback(
+        app->view_dispatcher, bioamp_exg_pill_app_tick_event_callback, 100);
+
     return app;
 }
 
